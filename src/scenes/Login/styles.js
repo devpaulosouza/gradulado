@@ -16,9 +16,11 @@ const style = StyleSheet.create({
   },
   title: {
     fontSize: fonts.display2,
+    fontFamily: 'Roboto-Thin',
   },
   subTitle: {
     fontSize: fonts.subheading,
+    fontFamily: 'Roboto-Thin',
   },
   center: {
     alignItems: 'center',
@@ -28,6 +30,27 @@ const style = StyleSheet.create({
   },
   button: {
     marginTop: metrics.bigSpacing,
+  },
+  errorContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 12,
+  },
+  errorText: {
+    color: colors.error,
+    fontSize: fonts.caption,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderColor: colors.primary,
+  },
+  input: {
+    flex: 1,
+  },
+  iconInput: {
+    marginRight: metrics.smallSpacing,
   },
 });
 
