@@ -6,12 +6,16 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "format": "prettier --write '**/*.{js,jsx}'",
-    "lint": "eslint '**/*.{js, jsx}' --quiet"
+    "lint": "eslint '**/*.{js, jsx}' --quiet",
+    "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
   },
   "dependencies": {
     "eslint": "^4.16.0",
+    "firebase": "^4.9.0",
     "react": "16.2.0",
     "react-native": "0.52.2",
+    "react-native-elements": "^0.19.0",
+    "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.0.0-beta.27"
   },
   "devDependencies": {
@@ -29,5 +33,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
   }
 }
